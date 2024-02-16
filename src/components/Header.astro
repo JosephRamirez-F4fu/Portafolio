@@ -1,0 +1,13 @@
+---
+interface Props {
+  favicon: string;
+}
+
+const { favicon } = Astro.props;
+---
+
+<header class="bg-gray-800 text-white py-4 px-6">
+  <div class="container mx-auto flex items-center justify-between">
+    <img src={favicon} alt="Logo" class="w-12 h-12" />
+  </div>
+</header>

@@ -1,0 +1,16 @@
+---
+interface Props {
+  img: string;
+  description: string;
+  bold: string;
+}
+const { img, description, bold } = Astro.props;
+---
+
+<main class="flex flex-row justify-center items-center">
+  <img src={img} class="w-40 h-auto" />
+  <div>
+    <p class="text-lime-800 font-bold text-4xl">{bold}</p>
+    <p class="text-pretty">{description}</p>
+  </div>
+</main>

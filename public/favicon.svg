@@ -1,0 +1,25 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sombra -->
+  <defs>
+    <filter id="dropshadow" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Contorno blanco -->
+  <circle cx="50" cy="50" r="42" fill="white" filter="url(#dropshadow)" />
+  
+  <!-- Círculo negro -->
+  <circle cx="50" cy="50" r="40" fill="black" filter="url(#dropshadow)" />
+  
+  <!-- Texto "R" blanco -->
+  <text x="33" y="62" font-family="Arial" font-size="40" fill="white" filter="url(#dropshadow)">R</text>
+</svg>

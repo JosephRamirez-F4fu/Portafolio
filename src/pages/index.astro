@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Presentation from "../components/Presentation.astro";
+const data = {
+  title: "Portafolio",
+  author: "Joseph Ramirez",
+  img: "/favicon.svg",
+  description:
+    "Hi, I'm Joseph Ramirez, a student of Computer Science, I'm passionate about technology and IA",
+  bold: "Full Stack Developer",
+};
+---
+
+<Layout title={data.title} img={data.img} author={data.author}>
+  <Presentation
+    img={data.img}
+    description={data.description}
+    bold={data.bold}
+  />
+</Layout>

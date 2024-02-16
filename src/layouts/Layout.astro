@@ -1,0 +1,26 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+interface Props {
+  title: string;
+  img: string;
+  author: string;
+}
+const { title, img, author } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href={img} type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <Header favicon={img} />
+    <slot />
+    <Footer title={title} name={author} />
+  </body>
+</html>
